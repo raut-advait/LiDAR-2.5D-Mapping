@@ -1,0 +1,30 @@
+# Environments
+.venv/
+.env
+.venv_cuda/
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+
+# Data and Models
+data/processed/
+data/raw/
+*.npz
+*.pt
+*.pth
+
+# IDE and OS
+.vscode/
+.idea/
+.DS_Store
+*.swp
+
+# Visualizations
+*.gif
+*.mp4
+
+# Antigravity/Agent scratches
+scratch_test.py
