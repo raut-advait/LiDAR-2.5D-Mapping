@@ -2,14 +2,6 @@
 
 Project Balerion is a distance-aware and detail-aware adaptive LiDAR perception system built for real-time risk assessment, local resolution refinement, and dynamic safety decision-making.
 
-## Team & Tracks
-
-| Track | Owner | Responsibility |
-|---|---|---|
-| **Track A — Model** | Model Lead | PointNet++ inference and exporting cached `.npz` predictions |
-| **Track B — Preprocessing** | Preprocessing Lead | Frame loading, ego-centered coordinate handling (+X forward, +Y left, +Z up), 60m clipping filter |
-| **Track C — Dashboard/UI** | Dashboard Lead | Matplotlib dashboard UI shell, panel layout, live metrics, and event log |
-| **Track D — Risk/Integration** | Advait | Adaptive 2.5D cell rendering, hazard simulation, risk engine, TTC/safety logic, integration lead |
 
 ## Repository Structure
 
