@@ -5,12 +5,13 @@ from pathlib import Path
 import numpy as np
 
 from preprocessing.loader import FrameLoader
-from preprocessing.preprocess import normalize_xyz, sample_points
+from preprocessing.preprocess import normalize_xyz
+from preprocessing.sampling import voxel_sample_points
 
 
 PROJECT_ROOT = Path(__file__).resolve().parent.parent
 RAW_DIR = PROJECT_ROOT / "data" / "raw"
-OUTPUT_DIR = PROJECT_ROOT / "data" / "processed" / "cleaned_frames"
+OUTPUT_DIR = PROJECT_ROOT / "data" / "processed_2" / "cleaned_frames"
 
 
 def preprocess_all_frames(
@@ -18,6 +19,7 @@ def preprocess_all_frames(
     output_dir: Path = OUTPUT_DIR,
     clip_radius: float = 60.0,
     num_points: int = 32768,
+    voxel_size: float = 0.25,
 ) -> int:
     """Save cleaned real-world points and normalized model points for every frame."""
     raw_files = sorted(raw_dir.glob("*.pcd.bin"))
@@ -31,12 +33,18 @@ def preprocess_all_frames(
 
     for raw_file in raw_files:
         points = loader.load_frame(str(raw_file))
-        model_points = normalize_xyz(sample_points(points, num_points))
+        sampled_points = voxel_sample_points(
+            points,
+            num_points=num_points,
+            voxel_size=voxel_size,
+        )
+        model_points = normalize_xyz(sampled_points)
         output_file = output_dir / f"{raw_file.stem}_cleaned.npz"
 
         np.savez_compressed(
             output_file,
             points=points.astype(np.float32, copy=False),
+            sampled_points=sampled_points.astype(np.float32, copy=False),
             model_points=model_points.astype(np.float32, copy=False),
             source_file=np.array(raw_file.name),
         )
@@ -45,7 +53,8 @@ def preprocess_all_frames(
         print(
             f"[{processed_count}/{len(raw_files)}] "
             f"{raw_file.name}: "
-            f"raw={points.shape}, model={model_points.shape} "
+            f"raw={points.shape}, sampled={sampled_points.shape}, "
+            f"model={model_points.shape} "
             f"-> {output_file.name}"
         )
 
