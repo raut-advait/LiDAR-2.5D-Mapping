@@ -1,0 +1,21 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Data and cached predictions
+data/predictions/*.npz
+!data/predictions/.gitkeep
+*.npz
+
+# Environments and IDEs
+.venv/
+env/
+venv/
+ENV/
+.idea/
+.vscode/
+
+# OS generated files
+.DS_Store
+Thumbs.db
