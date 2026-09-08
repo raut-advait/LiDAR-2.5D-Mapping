@@ -1,0 +1,202 @@
+[
+  {
+    "tick": 0,
+    "hazard": {
+      "x": 30.5,
+      "y": 4.0,
+      "vx": -1.5,
+      "vy": -2.0
+    },
+    "risk": 0.3473676405596214,
+    "risk_level": "LOW",
+    "action": "PROCEED",
+    "time_label": "Path Entry Time",
+    "time_value": "0.75s",
+    "refinement_active": false,
+    "local_points": 2,
+    "fine_cells_added": 0,
+    "source_point_difference": 0,
+    "remaining_coarse_cells": 1,
+    "event": "ACTION START \u2192 PROCEED"
+  },
+  {
+    "tick": 1,
+    "hazard": {
+      "x": 29.75,
+      "y": 3.0,
+      "vx": -1.5,
+      "vy": -2.0
+    },
+    "risk": 0.4187317101347311,
+    "risk_level": "MEDIUM",
+    "action": "PROCEED WITH CAUTION",
+    "time_label": "Path Entry Time",
+    "time_value": "0.25s",
+    "refinement_active": false,
+    "local_points": 0,
+    "fine_cells_added": 0,
+    "source_point_difference": 0,
+    "remaining_coarse_cells": 1,
+    "event": "RISK LOW \u2192 MEDIUM | ACTION PROCEED \u2192 PROCEED WITH CAUTION"
+  },
+  {
+    "tick": 2,
+    "hazard": {
+      "x": 29.0,
+      "y": 2.0,
+      "vx": -1.5,
+      "vy": -2.0
+    },
+    "risk": 0.8325845163746086,
+    "risk_level": "HIGH",
+    "action": "SLOW DOWN",
+    "time_label": "Path Conflict Time",
+    "time_value": "19.33s",
+    "refinement_active": true,
+    "local_points": 353,
+    "fine_cells_added": 26,
+    "source_point_difference": 0,
+    "remaining_coarse_cells": 0,
+    "event": "RISK MEDIUM \u2192 HIGH | ACTION PROCEED WITH CAUTION \u2192 SLOW DOWN | REFINEMENT ON"
+  },
+  {
+    "tick": 3,
+    "hazard": {
+      "x": 28.25,
+      "y": 1.0,
+      "vx": -1.5,
+      "vy": -2.0
+    },
+    "risk": 0.8644537435293035,
+    "risk_level": "CRITICAL",
+    "action": "BRAKE",
+    "time_label": "Path Conflict Time",
+    "time_value": "18.83s",
+    "refinement_active": true,
+    "local_points": 577,
+    "fine_cells_added": 46,
+    "source_point_difference": 0,
+    "remaining_coarse_cells": 0,
+    "event": "RISK HIGH \u2192 CRITICAL | ACTION SLOW DOWN \u2192 BRAKE"
+  },
+  {
+    "tick": 4,
+    "hazard": {
+      "x": 27.5,
+      "y": 0.0,
+      "vx": -1.5,
+      "vy": -2.0
+    },
+    "risk": 0.8949905660377356,
+    "risk_level": "CRITICAL",
+    "action": "BRAKE",
+    "time_label": "Path Conflict Time",
+    "time_value": "18.33s",
+    "refinement_active": true,
+    "local_points": 574,
+    "fine_cells_added": 51,
+    "source_point_difference": 0,
+    "remaining_coarse_cells": 0,
+    "event": "CRITICAL RISK \u2192 BRAKE | LOCAL REFINEMENT ACTIVE"
+  },
+  {
+    "tick": 5,
+    "hazard": {
+      "x": 26.75,
+      "y": -1.0,
+      "vx": -1.5,
+      "vy": -2.0
+    },
+    "risk": 0.9240803424578353,
+    "risk_level": "CRITICAL",
+    "action": "BRAKE",
+    "time_label": "Path Conflict Time",
+    "time_value": "17.83s",
+    "refinement_active": true,
+    "local_points": 538,
+    "fine_cells_added": 52,
+    "source_point_difference": 0,
+    "remaining_coarse_cells": 0,
+    "event": "CRITICAL RISK \u2192 BRAKE | LOCAL REFINEMENT ACTIVE"
+  },
+  {
+    "tick": 6,
+    "hazard": {
+      "x": 26.0,
+      "y": -2.0,
+      "vx": -1.5,
+      "vy": -2.0
+    },
+    "risk": 0.9516013199510772,
+    "risk_level": "CRITICAL",
+    "action": "BRAKE",
+    "time_label": "Path Conflict Time",
+    "time_value": "17.33s",
+    "refinement_active": true,
+    "local_points": 543,
+    "fine_cells_added": 57,
+    "source_point_difference": 0,
+    "remaining_coarse_cells": 0,
+    "event": "CRITICAL RISK \u2192 BRAKE | LOCAL REFINEMENT ACTIVE"
+  },
+  {
+    "tick": 7,
+    "hazard": {
+      "x": 25.25,
+      "y": -3.0,
+      "vx": -1.5,
+      "vy": -2.0
+    },
+    "risk": 0.09214652520096607,
+    "risk_level": "LOW",
+    "action": "PROCEED",
+    "time_label": "Path Entry Time",
+    "time_value": "SAFE",
+    "refinement_active": false,
+    "local_points": 568,
+    "fine_cells_added": 0,
+    "source_point_difference": 0,
+    "remaining_coarse_cells": 30,
+    "event": "RISK CRITICAL \u2192 LOW | ACTION BRAKE \u2192 PROCEED | REFINEMENT OFF"
+  },
+  {
+    "tick": 8,
+    "hazard": {
+      "x": 24.5,
+      "y": -4.0,
+      "vx": -1.5,
+      "vy": -2.0
+    },
+    "risk": 0.08182075468250835,
+    "risk_level": "LOW",
+    "action": "PROCEED",
+    "time_label": "Path Entry Time",
+    "time_value": "SAFE",
+    "refinement_active": false,
+    "local_points": 565,
+    "fine_cells_added": 0,
+    "source_point_difference": 0,
+    "remaining_coarse_cells": 31,
+    "event": "LOW RISK \u2192 PROCEED"
+  },
+  {
+    "tick": 9,
+    "hazard": {
+      "x": 23.75,
+      "y": -5.0,
+      "vx": -1.5,
+      "vy": -2.0
+    },
+    "risk": 0.07075582305361762,
+    "risk_level": "LOW",
+    "action": "PROCEED",
+    "time_label": "Path Entry Time",
+    "time_value": "SAFE",
+    "refinement_active": false,
+    "local_points": 553,
+    "fine_cells_added": 0,
+    "source_point_difference": 0,
+    "remaining_coarse_cells": 32,
+    "event": "LOW RISK \u2192 PROCEED"
+  }
+]
